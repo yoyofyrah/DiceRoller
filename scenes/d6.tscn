@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxdfat1rgkloi"]
+
+[ext_resource type="Script" path="res://scripts/d20.gd" id="1_uiplt"]
+[ext_resource type="Texture2D" uid="uid://dun1po8utdlx5" path="res://assets/art/dieWhite_border1.png" id="2_dw0e6"]
+
+[node name="D6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uiplt")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.447059, 0.564706, 1)
+
+[node name="DiceFace" type="Sprite2D" parent="."]
+position = Vector2(648, 192)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dw0e6")
+
+[node name="TotalScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -592.0
+offset_top = -416.0
+offset_right = 608.0
+offset_bottom = -166.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 96
+text = "Hit that button!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="RollButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -162.0
+offset_right = 148.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 72
+text = "Roll"
+
+[node name="DiceMenu" type="MenuButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 250.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 48
+text = "Die Select"
+switch_on_hover = true
+item_count = 1
+popup/item_0/text = "d20"
+popup/item_0/id = 0
+
+[connection signal="pressed" from="RollButton" to="." method="_on_roll_button_pressed"]
