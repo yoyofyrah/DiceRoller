@@ -76,14 +76,17 @@ func roll():
 
 func check():
 	if n == 6:
+		dice_face.position =  Vector2(648, 278)
 		total_score.text = "you rolled a " + str(n) + ", " + names[randi_range(1, 40)]
 		print("Nice! you rolled a ", str(n))
 		dice_face.texture = dice_pics[n]
 	elif n == 1:
+		dice_face.position =  Vector2(648, 192)
 		total_score.text = "Oh no! You rolled a " + str(n)
 		print("Oh no! You rolled a ", str(n))
 		dice_face.texture = dice_pics[n]
 	else:
+		dice_face.position =  Vector2(648, 192)
 		total_score.text = "You rolled " + str(n)
 		print("you rolled ", str(n))
 		dice_face.texture = dice_pics[n]
