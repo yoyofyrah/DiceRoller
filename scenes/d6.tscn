@@ -64,7 +64,6 @@ theme_override_font_sizes/font_size = 72
 text = "Roll"
 
 [node name="DiceMenu" type="MenuButton" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0

@@ -55,9 +55,7 @@ var names = {
 	40: "Can't Tayne You Away",
 }
 
-
 var n := 0
-
 
 func _ready() -> void:
 	var popup = dice_menu.get_popup()
@@ -69,7 +67,6 @@ func dice_select(id):
 	match(id):
 		0:
 			print("d20")
-
 
 func roll():
 	n = randi_range(1, 6)
