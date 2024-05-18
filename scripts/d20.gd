@@ -10,6 +10,7 @@ extends Control
 4: load("res://assets/art/dieWhite_border4.png"),
 5: load("res://assets/art/dieWhite_border5.png"),
 6: load("res://assets/art/tayne Small.png"),
+7: load("res://assets/art/D20.png")
 }
 
 var names = {
@@ -67,6 +68,7 @@ func dice_select(id):
 	match(id):
 		0:
 			print("d20")
+			dice_face.texture = dice_pics[7]
 
 func roll():
 	n = randi_range(1, 6)
