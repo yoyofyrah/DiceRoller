@@ -69,6 +69,7 @@ func dice_select(id):
 		0:
 			print("d20")
 			dice_face.texture = dice_pics[7]
+				
 
 func roll():
 	n = randi_range(1, 6)
